@@ -16,9 +16,16 @@ int		get_next_line(const int fd, char **line)
 	char		buf[BUF_SIZE];
 	char		*dup;
 	static int	line_nbr;
+	int			i;
 
+	i = 0;
 	while ((ret = read(fd, buf, BUF_SIZE)) > 0)
 	{
-		while (line[])
+		if ((dup = ft_strdup(buf)) == NULL)
+			return (NULL);
+		line = ft_strsplit(buf, '\n');
+		ft_putstr(line[line_nbr]);
+		line_nbr++;
 	}
+	
 }
