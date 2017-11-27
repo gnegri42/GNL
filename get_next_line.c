@@ -6,14 +6,14 @@
 /*   By: gnegri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 17:40:11 by gnegri            #+#    #+#             */
-/*   Updated: 2017/11/22 17:40:12 by gnegri           ###   ########.fr       */
+/*   Updated: 2017/11/27 16:23:31 by gnegri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "get_next_line.h"
 
-static int			ft_is_line(char **str, char **line)
+static int		ft_is_line(char **str, char **line)
 {
 	char		*tmp;
 	char		*str_l;
@@ -35,7 +35,7 @@ static int			ft_is_line(char **str, char **line)
 	return (1);
 }
 
-static int			ft_read_data(int fd, char *buff, char **str, char **line)
+static int		ft_read_data(int fd, char *buff, char **str, char **line)
 {
 	int			ret;
 	char		*tmp;
@@ -58,7 +58,7 @@ static int			ft_read_data(int fd, char *buff, char **str, char **line)
 	return (0);
 }
 
-int					get_next_line(int const fd, char **line)
+int				get_next_line(int const fd, char **line)
 {
 	static char	*str[2147483647];
 	char		*buff;
